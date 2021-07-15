@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import {NavbarRest} from "./components/Navbar";
+import {Login} from "./components/Login";
+import {SignUp} from "./components/SignUp";
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import {Confirmation} from "./components/Confirmation";
+import {Menu} from "./components/Menu";
+import {Order} from "./components/Order";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <div className={'app'}>
+                <NavbarRest/>
+                <main role="main" className="container">
+                    <Route exact path="/" component={Login}/>
+                    <Route path="/SignUp" component={SignUp}/>
+                    <Route path="/Confirmation" component={Confirmation}/>
+                    <Route path="/Menu" component={Menu}/>
+                    <Route path="/Order" component={Order}/>
+                </main>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
