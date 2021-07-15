@@ -1,4 +1,3 @@
-import React from "react";
 import './confirmation.css';
 import imgSuccess from "./../../img/sample.PNG";
 
