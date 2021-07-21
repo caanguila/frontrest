@@ -1,0 +1,35 @@
+body {
+    font-family: 'Roboto', sans-serif
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #fc885c;
+    border-radius: 35px;
+    border: 1px solid white;
+}
+
+.btn-primary:hover {
+    background-color: #fc890c;
+    border: 1px solid white;
+}
+
+.btn-light {
+    color: #fc885c;
+    background-color: white;
+    border-radius: 35px;
+    border: 1px solid white;
+}
+
+.btn {
+    font-size: 12px;
+}
+
+.label-form {
+    color: gray;
+    font-size: 0.8em;
+}
+
+label {
+    margin-bottom: auto;
+}

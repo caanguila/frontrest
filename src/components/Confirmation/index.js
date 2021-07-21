@@ -1,17 +1,24 @@
+import React from 'react';
 import './confirmation.css';
 import imgSuccess from "./../../img/sample.PNG";
+import {Button, Col, Form, Row} from "react-bootstrap";
 
 export const Confirmation = () => {
     return (
-        <div className="sign-up">
-            <form className="form-signin">
-                <img src={imgSuccess} alt={"Exito"}/>
-                <div className={"text-center font-weight-bolder"}>¡Recibimos tu pedido!</div>
-                <p className={"text-center"}>Carlos, gracias por pedir a Delilah. Puedes seguir tu pedido para saber
+        <Row>
+            <Col md={{span: 6, offset: 3}} className={"text-center"}>
+                <img className={"confirmationImg "} src={imgSuccess} alt={"Exito"}/>
+                <div className={"font-weight-bolder"}>¡Recibimos tu pedido!</div>
+                <p>Carlos, gracias por pedir a Delilah. Puedes seguir tu pedido para saber
                     dónde está.</p>
-                <button className="btn btn-lg btn-primary btn-block col-8 mx-auto mt-5" type="submit">SEGUIR PEDIDO
-                </button>
-            </form>
-        </div>
+            
+            </Col>
+            <Row>
+                <Col className={"text-center"}>
+                    <Button variant="primary" className={"btn-lg btn-block col-5 col-sm-4"} type="submit">SEGUIR
+                        PEDIDO</Button>
+                </Col>
+            </Row>
+        </Row>
     );
 };

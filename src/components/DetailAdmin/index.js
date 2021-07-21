@@ -1,3 +1,4 @@
+import React from 'react';
 import './detailAdmin.css';
 import {ShowDish} from "../Dish";
 

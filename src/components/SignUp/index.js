@@ -1,33 +1,52 @@
+import React from 'react';
 import './signup.css';
+import {Button, Col, Form, Row} from "react-bootstrap";
 
 export const SignUp = () => {
     return (
-        <div className="sign-up">
-            <form className="form-signin">
-                <label className={'label-login'} htmlFor="inputUsuario">Usuario</label>
-                <input type="text" id="inputUsuario" className="form-control" placeholder="Usuario"
-                       required autoFocus/>
-                <label className={'label-login'} htmlFor="inputNombreApellido">Nombre y Apellido</label>
-                <input type="text" id="inputNombreApellido" className="form-control"
-                       placeholder="Nombre y Apellido" required/>
-                <label className={'label-login'} htmlFor="inputCorreoElectronico">Correo electrónico</label>
-                <input type="text" id="inputCorreoElectronico" className="form-control"
-                       placeholder="Correo electrónico" required/>
-                <label className={'label-login'} htmlFor="inputTelefono">Teléfono</label>
-                <input type="text" id="inputTelefono" className="form-control"
-                       placeholder="Teléfono" required/>
-                <label className={'label-login'} htmlFor="inputDireccionEnvio">Dirección de envió</label>
-                <input type="text" id="inputDireccionEnvio" className="form-control"
-                       placeholder="Dirección de envió" required/>
-                <label className={'label-login'} htmlFor="inputPasword">Contraseña</label>
-                <input type="password" id="inputPasword" className="form-control"
-                       placeholder="Contraseña" required/>
-
-                <button className="btn btn-lg btn-primary btn-block col-8 mx-auto mt-5" type="submit">CREAR CUENTA
-                </button>
-                <button className="btn btn-lg btn-light btn-block col-8 mx-auto" type="button">INICIAR SESIÓN
-                </button>
-            </form>
-        </div>
+        <Form>
+            <Row>
+                <Col md={{span: 6, offset: 3}}>
+                    <Form.Group className="mb-3" controlId="inputUsuario">
+                        <Form.Label className={"label-form"}>Usuario</Form.Label>
+                        <Form.Control id={"inputUsuario"} type="text" placeholder="Usuario" required/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="inputNombreApellido">
+                        <Form.Label className={"label-form"}>Nombre y Apellido</Form.Label>
+                        <Form.Control id={"inputNombreApellido"} type="text" placeholder="Nombre y Apellido" required/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="inputCorreoElectronico">
+                        <Form.Label className={"label-form"}>Correo electrónico</Form.Label>
+                        <Form.Control id={"inputCorreoElectronico"} type="text" placeholder="Correo electrónico"
+                                      required/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="inputTelefono">
+                        <Form.Label className={"label-form"}>Teléfono</Form.Label>
+                        <Form.Control id={"inputTelefono"} type="text" placeholder="Teléfono" required/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="inputDireccionEnvio">
+                        <Form.Label className={"label-form"}>Dirección de envió</Form.Label>
+                        <Form.Control id={"inputDireccionEnvio"} type="email" placeholder="Dirección de envió"
+                                      required/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="inputPasword">
+                        <Form.Label className={"label-form"}>Contraseña</Form.Label>
+                        <Form.Control id={"inputPasword"} type="password" placeholder="Contraseña" required/>
+                    </Form.Group>
+                </Col>
+            </Row>
+            <Row className={"mt-5"}>
+                <Col className={"text-center"}>
+                    <Button variant="primary" className={"btn-lg btn-block col-4 col-sm-3"} type="submit">CREAR
+                        CUENTA</Button>
+                </Col>
+            </Row>
+            <Row>
+                <Col className={"text-center"}>
+                    <Button variant="light" className={"btn-lg btn-block col-4 col-sm-3"}>INICIAR
+                        SESIÓN</Button>
+                </Col>
+            </Row>
+        </Form>
     );
 };

@@ -1,14 +1,15 @@
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import {Login} from "./components/Login";
-import {SignUp} from "./components/SignUp";
+import {Login} from "../Login";
+import {SignUp} from "../SignUp";
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import {Confirmation} from "./components/Confirmation";
-import {Menu} from "./components/Menu";
-import {Order} from "./components/Order";
-import {Admin} from "./components/Admin";
-import {NavbarRest} from "./components/Navbar";
-import {DetailAdmin} from "./components/DetailAdmin";
+import {Confirmation} from "../Confirmation";
+import {Menu} from "../Menu";
+import {Order} from "../Order";
+import {Admin} from "../Admin";
+import {NavbarRest} from "../Navbar";
+import {DetailAdmin} from "../DetailAdmin";
 
 
 function App() {

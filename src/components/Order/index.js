@@ -1,3 +1,4 @@
+import React from 'react';
 import './order.css';
 import {OrderDish} from "../Dish";
 
