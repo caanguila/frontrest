@@ -21,6 +21,13 @@ body {
     border: 1px solid white;
 }
 
+.btn-outline-light {
+    color: #fc885c;
+    background-color: white;
+    border-radius: 35px;
+    border: 1px solid #fc885c;
+}
+
 .btn {
     font-size: 12px;
 }
@@ -28,6 +35,12 @@ body {
 .label-form {
     color: gray;
     font-size: 0.8em;
+}
+
+.label-bold {
+    font-weight: bold;
+    color: gray;
+    font-size: 0.9em;
 }
 
 label {

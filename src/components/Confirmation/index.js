@@ -1,7 +1,7 @@
 import React from 'react';
 import './confirmation.css';
 import imgSuccess from "./../../img/sample.PNG";
-import {Button, Col, Form, Row} from "react-bootstrap";
+import {Button, Col, Row} from "react-bootstrap";
 
 export const Confirmation = () => {
     return (
