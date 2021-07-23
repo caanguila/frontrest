@@ -9,7 +9,7 @@ import {Menu} from "../Menu";
 import {Order} from "../Order";
 import {Admin} from "../Admin";
 import {NavbarRest} from "../Navbar";
-import {DetailAdmin} from "../DetailAdmin";
+import {HistoryDetail} from "../HistoryDetail";
 
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
                     <Route path="/Menu" component={Menu}/>
                     <Route path="/Order" component={Order}/>
                     <Route path="/Admin" component={Admin}/>
-                    <Route path="/DetailAdmin" component={DetailAdmin}/>
+                    <Route path="/History" component={HistoryDetail}/>
                 </main>
             </div>
         </Router>

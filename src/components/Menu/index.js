@@ -7,13 +7,13 @@ export const Menu = () => {
     return (
         <>
             <Row>
-                <div className={"col-md-8 mt-3 font-weight-bold"}>Nuestros platos</div>
+                <div className={"col-md-8 mt-3 label-bold"}>Nuestros platos</div>
             </Row>
-            <AddDish></AddDish>
-            <AddDish></AddDish>
-            <AddDish></AddDish>
-            <AddDish></AddDish>
-            <AddDish></AddDish>
+            <AddDish/>
+            <AddDish/>
+            <AddDish/>
+            <AddDish/>
+            <AddDish/>
         </>
     );
 };

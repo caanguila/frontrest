@@ -1,24 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './admin.css';
-import {Row, Table} from "react-bootstrap";
+import {Row, Table, Offcanvas} from "react-bootstrap";
+import {DetailAdmin} from "../DetailAdmin";
 
 export const Admin = () => {
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <Row className={"mt-2"}>
             <Table responsive striped hover>
                 <thead>
-                <tr>
+                <tr className={"label-bold"}>
                     <th scope="col">ESTADO</th>
                     <th scope="col">HORA</th>
                     <th scope="col">NÚMERO</th>
                     <th scope="col">DESCRIPCIÓN</th>
                     <th scope="col">PAGO</th>
                     <th scope="col">USUARIO</th>
-                    <th scope="col">DIRECCION</th>
+                    <th scope="col">DIRECCIÓN</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
+                <tr onClick={handleShow}>
                     <th scope="row"><span className="badge rounded-pill bg-danger">NUEVO</span></th>
                     <td>12:30PM</td>
                     <td>#7</td>
@@ -74,6 +81,15 @@ export const Admin = () => {
                 </tr>
                 </tbody>
             </Table>
+
+            <Offcanvas show={show} onHide={handleClose} placement={"end"}>
+                <Offcanvas.Header closeButton>
+                    <Offcanvas.Title> <label className={"label-bold"}>Detalle</label></Offcanvas.Title>
+                </Offcanvas.Header>
+                <Offcanvas.Body>
+                    <DetailAdmin/>
+                </Offcanvas.Body>
+            </Offcanvas>
         </Row>
     );
 };

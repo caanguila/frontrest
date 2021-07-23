@@ -1,17 +1,19 @@
 import React from 'react';
-import './order.css';
-import {OrderDish} from "../Dish";
-import {Button, Col, Row} from "react-bootstrap";
+import {ShowDish} from "../Dish";
+import {Col, Row} from "react-bootstrap";
 
-export const Order = () => {
+export const HistoryDetail = () => {
     return (
         <>
+            <Row>
+                <label className={"col-md-8 mt-3 label-bold"}>Estado</label>
+            </Row>
             <Row>
                 <label className={"col-md-8 mt-3 label-bold"}>Detalle</label>
             </Row>
             <Row className={"mb-4"}>
-                <OrderDish/>
-                <OrderDish/>
+                <ShowDish/>
+                <ShowDish/>
             </Row>
             <Row className={"mb-4"}>
                 <Col md={"8"}>
@@ -25,18 +27,6 @@ export const Order = () => {
                     <select className={"form-control"}>
                         <option>Efectivo</option>
                     </select>
-                </Col>
-            </Row>
-            <Row className={"mb-3"}>
-                <Col xs={"8"} md={"8"} className={"form-group"}>
-                    <label className={"label-bold mb-2"}>Dirección</label>
-                    <p>Ejemplo de dirección ipsem laurem </p>
-                </Col>
-            </Row>
-            <Row>
-                <Col className={"text-center"}>
-                    <Button variant="primary" className={"btn-lg btn-block col-5 col-sm-4"} type="submit">CONFIRMAR
-                        PEDIDO</Button>
                 </Col>
             </Row>
         </>

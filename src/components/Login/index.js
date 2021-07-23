@@ -13,7 +13,7 @@ export const Login = () => {
                     </Form.Group>
                 </Col>
             </Row>
-            <Row className={"mt-4"}>
+            <Row>
                 <Col md={{span: 6, offset: 3}}>
                     <Form.Group className="mb-3" controlId="inputPassword">
                         <Form.Label className={"label-form"}>Contraseña</Form.Label>
